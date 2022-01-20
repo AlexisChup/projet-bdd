@@ -162,4 +162,26 @@ function updateNote($info){
 
 }
 
+        // REQUETES IMPOSEES ET PERSONNELLES
+        function getGeneric($sql){
+            $values = null;
+     
+             try{
+                 $h="mysql:host=".DB_HOST.";dbname=".DB_NAME;
+                 $link = new PDO($h, DB_USER, DB_PASS);
+                 $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     
+                 $sth = $link->prepare($sql);
+                 $sth->execute();
+     
+                 $values = $sth->fetchAll(PDO::FETCH_ASSOC);
+             }
+                 
+             catch(PDOException $e){
+                 echo "Erreur : " . $e->getMessage();
+             }
+         
+             return $values;   
+        }
+
 ?>
