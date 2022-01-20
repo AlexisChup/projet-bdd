@@ -1,5 +1,5 @@
 body{
-    background: #67BE4B;
+    background: #f6f6f6;
 }
 #container{
     width:400px;
@@ -8,7 +8,6 @@ body{
 }
 /* Bordered form */
 form {
-    width:100%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
@@ -46,9 +45,24 @@ input[type=submit]:hover {
     border: 1px solid #53af57;
 }
 
-#container table {
-    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
-#container td, th {
-    border: 1px solid black;
+  
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
 }

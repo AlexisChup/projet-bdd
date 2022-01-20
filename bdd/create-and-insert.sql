@@ -643,36 +643,36 @@ INSERT INTO Competiteur (`numCompetiteur`) VALUES
 INSERT INTO Concours (`theme`, `etat`, `descriptif`, `dateDebut`, `dateFin`) VALUES
 (
     "Art abstrait",
-    "Évalué",
-    "L'art abstrait des années 1940",
+    "Evalue",
+    "L'art abstrait des annees 1940",
     "2021-04-01",
     "2021-04-07"
 ),
 (
     "Art abstrait",
-    "Évalué",
-    "L'art abstrait des années 1940",
+    "Evalue",
+    "L'art abstrait des annees 1940",
     "2021-05-08",
     "2021-05-15"
 ),
 (
     "Art abstrait",
-    "En attente des résultats",
-    "L'art abstrait des années 1940",
+    "En attente des resultats",
+    "L'art abstrait des annees 1940",
     "2021-12-25",
     "2021-12-31"
 ),
 (
     "Art abstrait",
     "En cours",
-    "L'art abstrait des années 1940",
+    "L'art abstrait des annees 1940",
     "2022-01-01",
     "2021-03-01"
 ),
 (
     "Art abstrait",
-    "Non commencé",
-    "L'art abstrait des années 1940",
+    "Non commence",
+    "L'art abstrait des annees 1940",
     "2022-09-15",
     "2021-10-20"
 );
