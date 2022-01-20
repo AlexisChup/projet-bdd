@@ -45,3 +45,10 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
+
+#container table {
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+}
+#container td, th {
+    border: 1px solid black;
+}
