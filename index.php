@@ -1,19 +1,23 @@
 <html>
     <head>
        <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     </head>
     <body>
         <div id="container">
-            <form action="./verification.php" method="POST">
+            <!-- zone de connexion -->
+            
+            <form action="verification.php" method="POST">
                 <h1>Connexion</h1>
                 
-                <label><b>Adresse</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="adresse" required>
+                <label><b>Nom d'utilisateur</b></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="identifiant" required>
 
                 <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="mdp" required>
+                <input type="password" placeholder="Entrer le mot de passe" name="motDePasse" required>
 
-                <input type="submit" id='submit' value='LOGIN' >
+                <input type="submit" id='submit' value='CONNEXION' >
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
