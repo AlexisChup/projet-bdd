@@ -5,7 +5,7 @@
     }
 
     include_once("./requetes.php");
-    $utilisateur = getUtilisateur($id_utilisateur);
+    $utilisateur = getUtilisateurById($id_utilisateur);
     $nom = $utilisateur["nom"];
     $prenom = $utilisateur["prenom"];
     $role = $utilisateur["role"];
