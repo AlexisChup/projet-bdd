@@ -1,6 +1,6 @@
 <?php 
     include_once("./requetes.php");
-    $utilisateurs = getAllUtilisateurs();
+    $utilisateurs = getAllUtilisateurs()
 ?>
 
 <html lang="en">
@@ -14,7 +14,7 @@
     Bonjour administrateur
     <br>
     <h3>Créer un concours</h3>
-    <form action="" method="post">
+    <form action="./insertConcours.php" method="post">
 
         <label for="utilisateur">Choisir un président</label>
         <select name="utilisateur" id="utilisateur-select">
@@ -27,10 +27,10 @@
         </select>
         <br>
         <label for="date-debut">Date début</label>
-        <input type="date" value="2022-01-25" name="date-debut" id="">
+        <input type="date" value="2022-01-25" name="dateDebut" id="">
         <br>
         <label for="date-fin">Date fin</label>
-        <input type="date" value="2022-01-31" name="date-fin" id="">
+        <input type="date" value="2022-01-31" name="dateFin" id="">
         <br>
         <label for="theme">Theme</label>
         <input type="text" name="theme" id="">

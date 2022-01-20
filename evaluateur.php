@@ -4,7 +4,7 @@
 // var_dump($_SESSION);
 
     include_once("./requetes.php");
-    $utilisateur = getUtilisateur($_SESSION["id_utilisateur"]);
+    $utilisateur = getUtilisateurById($_SESSION["id_utilisateur"]);
     $nom = $utilisateur["nom"];
     $prenom = $utilisateur["prenom"];
     $role = $utilisateur["role"];
