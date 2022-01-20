@@ -139,4 +139,27 @@
      
          return $evaluation;   
  }
+
+function updateNote($info){
+
+    try{
+        $h="mysql:host=".DB_HOST.";dbname=".DB_NAME;
+        $link = new PDO($h, DB_USER, DB_PASS);
+        $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        echo "fdp";
+        var_dump($info);
+
+        $sql = "UPDATE `evalue` SET `note` = ".$info[0].", `commentaire` = '".$info[1]."' WHERE `evalue`.`numDessin` = ".$info[2]." AND `evalue`.`numEvaluateur` = ".$_SESSION["id_utilisateur"]."";
+        $sth = $link->prepare($sql);
+
+        $sth->execute();
+    }
+
+    catch(PDOException $e){
+        echo $e->getMessage();
+    }
+
+}
+
 ?>

@@ -30,10 +30,13 @@
                         echo '<tr><td>'.$note["note"]. '</td><td>'. $note["commentaire"]. '</td><td>'. $note["numDessin"]. '</td></tr>';
                     }
                     else{
-                        echo '<form action="" method="POST">
+                        echo '<form action="./updateNote.php" method="POST">
                         <h4>Numéro du dessin à noter : '.$note["numDessin"].'</h4>
+
+                        <input type="hidden" name="numDessin" value="'.$note["numDessin"].'">
+
                         <input type="text" placeholder="0" name="note" required>
-        
+                        
                         <input type="text" placeholder="Entrez un commentaire si possible" name="commentaire">
         
                         <input type="submit" id="submit" value="Noter le dessin">
