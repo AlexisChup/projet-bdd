@@ -17,17 +17,19 @@ if(isset($_POST['identifiant']) && isset($_POST['motDePasse']))
 
     if($username !== "" && $password !== "")
     {
-        $requete = "SELECT count(*) FROM utilisateur where 
+        $requete = "SELECT count(*), utilisateur.role, utilisateur.numUtilisateur FROM utilisateur where 
               identifiant = '".$username."' and motDePasse = '".$password."' ";
         $exec_requete = mysqli_query($db,$requete);
         $reponse = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
-
+        $role = $reponse['role'];
+        $_SESSION["id_utilisateur"] = intval($reponse['numUtilisateur']);
+         //  var_dump($_SESSION);
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
-           $_SESSION['identifiant'] = $username;
-
-           header('Location: evaluateur.php');
+           //$_SESSION['identifiant'] = $username;
+         
+            header("Location: ".$role.".php");
         }
         else
         {

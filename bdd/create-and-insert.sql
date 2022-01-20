@@ -117,8 +117,8 @@ INSERT INTO Utilisateur (`nom`, `prenom`, `adresse`, `role`, `identifiant`, `mot
     "bahuaud",
     "1 rue de la chevrre",
     "evaluateur",
-    "ttbb123456",
-    "azertyuiop",
+    "a",
+    "a",
     21 
 ),
 (
