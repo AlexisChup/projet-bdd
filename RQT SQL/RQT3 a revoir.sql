@@ -9,7 +9,9 @@ INNER JOIN Competiteur ON Remis.numCompetiteur = Competiteur.numCompetiteur
 INNER JOIN Utilisateur ON Competiteur.numCompetiteur = Utilisateur.numUtilisateur
 INNER JOIN Propose ON Dessin.numDessin = Propose.numDessin
 INNER JOIN Concours ON Propose.numConcours = Concours.numConcours;
-#--------------------------------------------------
+
+AND 
+
 SELECT Utilisateur.nom AS "Nom évaluateur", Evalue.note, Evalue.commentaire
 
 FROM Dessin
