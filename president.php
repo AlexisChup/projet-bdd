@@ -20,10 +20,10 @@
     </head>
     <body>
     <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
-        <div id="container">
+        <div id="accueil">
             <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
             <h3>Role : <?= $role?></h3>
-            <form action="./insertDrawing.php" method="post">
+            <form action="./insertDessin.php" method="post">
     
                 <label for="dessin">Choisir un dessin</label>
                 <select name="dessin" id="drawing-select">
@@ -32,15 +32,24 @@
                     foreach ($evaluateur as $key=>$value) {
                         echo '<option value="'.$value.'">'.$value["identifiant"]. ' '. $value["nom"]. '</option>';}?>
                 </select>
-                </br>
-                <label for="utilisateur">Choisir un jury</label>
-                <select name="utilisateur" id="utilisateur-select">
-                <option disabled selected="selected" value="default">Choisir un jury</option>
+                
+            </br>
+
+                <label for="utilisateur1">Choisir un jury</label>
+                <select name="utilisateur1" id="utilisateur-select">
+                <option disabled selected="selected" value="default">Choisir un premier évaluateur</option>
                 <?php 
                     foreach ($evaluateur as $key=>$value) {
                         echo '<option value="'.$value.'">'.$value["identifiant"]. ' '. $value["nom"]. '</option>';}?>
                 </select>
-
+                <select name="utilisateur2" id="utilisateur-select">
+                <option disabled selected="selected" value="default">Choisir un deuxième évaluateur</option>
+                <?php 
+                    foreach ($evaluateur as $key=>$value) {
+                        echo '<option value="'.$value.'">'.$value["identifiant"]. ' '. $value["nom"]. '</option>';}?>
+                </select>
+            </br>
+                <button type="submit">Créer</button>
             </form>
         </div>
     </body>
