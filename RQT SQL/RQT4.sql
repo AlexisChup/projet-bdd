@@ -1,9 +1,7 @@
-SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, COUNT(utilisateur.numUtilisateur)
-
+SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
 FROM utilisateur
-
 INNER JOIN competiteur ON utilisateur.numUtilisateur = competiteur.numCompetiteur
-INNER JOIN participe ON competiteur.numCompetiteur = participe.numCompetiteur
-INNER JOIN concours ON participe.numConcours = concours.numConcours
-
-GROUP BY utilisateur.numUtilisateur
+WHERE NOT EXISTS 
+(SELECT * 
+FROM Participe P, Competiteur C, Concours K
+WHERE C.numCompetiteur = P.numCompetiteur AND P.numConcours = K.numConcours)
