@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     <title>Requêtes imposées</title>
+    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
 </head>
 <body>
     <ol>

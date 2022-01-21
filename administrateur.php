@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrateur</title>
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
 </head>
 <body>
     <div class="container">

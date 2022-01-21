@@ -7,9 +7,7 @@
     $role = $utilisateur["role"];
 ?>
 <html lang="en">
-<head>
-     
-     
+<head>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <input type="button" value="Se déconnecter" onClick="window.location.href='./deconnexion.php?deconnexion=true'">
