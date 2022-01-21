@@ -30,4 +30,18 @@ WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-0
 
 ORDER BY Evalue.Note ASC');
 
+define('REQ7', 'SELECT Dessin.commentaire, MAX(Evalue.note) as noteMax
+
+FROM Dessin
+
+INNER JOIN Evalue ON Dessin.numDessin = Evalue.numDessin');
+
+define('REQ8', 'SELECT COUNT(Evalue.note) as nbrNote
+
+FROM Dessin
+
+INNER JOIN Evalue ON Dessin.numDessin = Evalue.numDessin
+
+WHERE Evalue.note < 10');
+
 ?>

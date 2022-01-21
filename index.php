@@ -3,6 +3,7 @@
         
         <!-- importer le fichier de style -->
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <title>Index</title>
     </head>
     <body>
         <div id="container">
