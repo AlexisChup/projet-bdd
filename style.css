@@ -54,9 +54,9 @@ table {
     background-color: #f6f6f6;
   }
 
-  table tr:nth-child(odd){
-    background-color: #b6b6b6;
-  }
+table tr:nth-child(odd){
+background-color: #b6b6b6;
+}
 
 th {
     background-color: #279CEC;
