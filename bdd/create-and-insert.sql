@@ -534,7 +534,7 @@ INSERT INTO Dessin (`classement`, `commentaire`) VALUES
 (0, "quel travail");
  
 INSERT INTO Evalue (`numDessin`, `numEvaluateur`, `commentaire`, `note`, `dateEvaluatin`) VALUES
-(1, 1, "nul", 5, "2021-04-07"),
+(1, 1, "", NULL, "2021-04-07"),
 (1, 2, "tres bien", 15, "2021-04-07"),
 (2, 3, "moyen", 10, "2021-04-07"),
 (2, 4, "peu mieux faire", 9, "2021-04-07"),
