@@ -1,8 +1,5 @@
 <?php 
     session_start();
-
-// var_dump($_SESSION);
-
     include_once("./requetes.php");
     $utilisateur = getUtilisateurById($_SESSION["id_utilisateur"]);
     $nom = $utilisateur["nom"];
@@ -13,13 +10,13 @@
 
 <html>
     <head>
-        
         <!-- importer le fichier de style -->
         <link rel="stylesheet" href="./style.css" media="screen" type="text/css" />
-        <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
+        <title>Evaluateur</title>
     </head>
     <body>
-        <div id="container">
+    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
+        <div id="accueil">
             <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
             <h3>Role : <?= $role?></h3>
             <?php

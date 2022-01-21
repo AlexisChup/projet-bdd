@@ -22,7 +22,7 @@
                 <h4>Requete 1</h4>
                 <span>Détails :</span>
                 <span>Afficher le nom et l’adresse et l’âge de tous les compétiteurs qui ont participé dans un concours en 2021.  Vous afficherez aussi la description du concours la date de début et la date de fin. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>
@@ -53,7 +53,7 @@
                 <h4>Requete 2</h4>
                 <span>Détails :</span>
                 <span>Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2019. Vous afficherez les informations suivantes : le numéro du dessin et la note attribuée, le nom du compétiteur, la description du concours et le thème du concours. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Numéro Dessin</th>
                         <th>Note</th>
@@ -82,7 +82,7 @@
                 <h4>Requete 5</h4>
                 <span>Détails :</span>
                 <span>Nom, prénom et adresse des évaluateurs qui ont évalués des dessins (au moins 1) dans tous les concours qui ont été organisés. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>

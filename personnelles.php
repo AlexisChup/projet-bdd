@@ -15,16 +15,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     <title>Requêtes personnelles</title>
-    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
 </head>
 <body>
+    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
     <ol>
         <li>
             <div class="item-req">
                 <h4>Requete 6</h4>
                 <span>Détails :</span>
                 <span>Afficher pour chaque thème et dans l’ordre croissant le nombre de compétiteur pour les concours où il y a le plus grand nombre de dessins proposés.  </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Thème</th>
                         <th>Nombre Compétiteur</th>
@@ -45,7 +45,7 @@
                 <h4>Requete 7</h4>
                 <span>Détails :</span>
                 <span>Pour tout concours confondus, afficher le commentaire du dessin ayant reçu la meilleure note. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Commentaire</th>
                         <th>Note</th>
@@ -66,7 +66,7 @@
                 <h4>Requete 8</h4>
                 <span>Détails :</span>
                 <span>Pour tout concours confondus, afficher le nombre de compétiteurs dont les dessins ont reçu ne note moyenne inférieure à 10. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Nombre de notes inférieures à 10</th>
                     </tr>
@@ -85,7 +85,7 @@
                 <h4>Requete 9</h4>
                 <span>Détails :</span>
                 <span>Afficher le nom, prénom et l'adresse du compétiteur dont les dessins ont le meilleur classement moyen. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>
@@ -110,7 +110,7 @@
                 <h4>Requete 10</h4>
                 <span>Détails :</span>
                 <span>Afficher par ordre décroissant l'identifiant et le prénom des évaluateurs en fonction des notes moyennes qu'ils mettent. </span>
-                <table id="customers">
+                <table>
                     <tr>
                         <th>Identifiant</th>
                         <th>Prénom</th>

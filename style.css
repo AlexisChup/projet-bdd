@@ -1,22 +1,61 @@
 body{
-    background: #f6f6f6;
+    background: white;    
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.index{
+    background-image: url('./img/eseo.jpg');
+}
+
 #container{
     width:400px;
     margin:0 auto;
-    margin-top:10%;
+    margin-top: 10%;
 }
+
+header{
+    background-image: url('./img/logoeseo.png');
+    height: 25%;
+}
+
+#container h1{
+    text-align: center;
+    padding: 0px;
+}
+
+#accueil{
+    width:800px;
+    margin:0 auto;
+    text-align:center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+    background-color: #f6f6f6;
+  }
+
+th {
+    background-color: #279CEC;
+    color: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
 /* Bordered form */
 form {
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-#container h1{
-    width: 38%;
-    margin: 0 auto;
-    padding-bottom: 10px;
 }
 
 /* Full-width inputs */
@@ -31,7 +70,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #53af57;
+    background-color: #279CEC;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -39,30 +78,9 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
 }
+
 input[type=submit]:hover {
     background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
-}
-
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-  
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
+    color: #279CEC;
+    border: 1px solid #279CEC;
 }

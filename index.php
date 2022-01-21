@@ -1,14 +1,14 @@
 <html>
-    <head>
-        
+    <head class="index">
+
         <!-- importer le fichier de style -->
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
         <title>Index</title>
+        
     </head>
-    <body>
+    <body class="index">
         <div id="container">
             <!-- zone de connexion -->
-            
             <form action="verification.php" method="POST">
                 <h1>Connexion</h1>
                 

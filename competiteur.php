@@ -12,12 +12,13 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- importer le fichier de style -->
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     <title>Utilisateur</title>
-    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
 </head>
 <body>
-    <div class="container">
+    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
+    <div id="accueil">
     <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
     <h3>Role : <?= $role?></h3> 
     <table id="customers">
