@@ -3,6 +3,7 @@
     include_once("./const.php");
     $req7 = getGeneric(REQ7);
     $req8 = getGeneric(REQ8);
+    $req9 = getGeneric(REQ9);
 ?>
 
 <html lang="en">
@@ -56,7 +57,31 @@
                 </table>
             </div>
         </li>
-        <li>Requête 9</li>
+        <li>
+            <div class="item-req">
+                <h4>Requete 9</h4>
+                <span>Détails :</span>
+                <span>Afficher le nom, prénom et l'adresse du compétiteur dont les dessins ont le meilleur classement moyen. </span>
+                <table id="customers">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Adresse</th>
+                        <th>Classement moyen</th>
+                    </tr>
+                    <?php
+                        foreach ($req9 as $key=>$value) {
+                            echo '<tr>
+                            <td>'. $value["nom"] .'</td>
+                            <td>'. $value["prenom"] .'</td>
+                            <td>'. $value["adresse"] .'</td>
+                            <td>'. $value["avgRanking"] .'</td>
+                            </tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </li>
         <li>Requête 10</li>
     </ol>
 </body>
