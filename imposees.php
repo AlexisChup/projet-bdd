@@ -54,7 +54,7 @@
             <div class="item-req">
                 <h4>Requete 2</h4>
                 <span>Détails :</span>
-                <span>Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2019. Vous afficherez les informations suivantes : le numéro du dessin et la note attribuée, le nom du compétiteur, la description du concours et le thème du concours. </span>
+                <span>Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2021. Vous afficherez les informations suivantes : le numéro du dessin et la note attribuée, le nom du compétiteur, la description du concours et le thème du concours. </span>
                 <table id="customers">
                     <tr>
                         <th>Numéro Dessin</th>
