@@ -30,6 +30,18 @@ WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-0
 
 ORDER BY Evalue.Note ASC');
 
+define('REQ3', 'SELECT concours.numConcours, concours.dateDebut, concours.descriptif, competiteur.numCompetiteur, dessin.numDessin, evalue.commentaire, evalue.note
+
+FROM concours, competiteur, evalue, dessin, propose, remis
+
+WHERE 
+(dessin.numDessin = propose.numDessin) AND 
+(propose.numConcours = concours.numConcours) AND 
+(dessin.numDessin = remis.numDessin) AND 
+(remis.numCompetiteur = competiteur.numCompetiteur)
+
+GROUP BY dessin.numDessin');
+
 define('REQ4', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
 FROM utilisateur
 INNER JOIN competiteur K on utilisateur.numUtilisateur = K.numCompetiteur

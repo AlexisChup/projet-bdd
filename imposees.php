@@ -3,6 +3,7 @@
     include_once("./const.php");
     $req1 = getGeneric(REQ1);
     $req2 = getGeneric(REQ2);
+    $req3 = getGeneric(REQ3);
     $req4 = getGeneric(REQ4);
     $req5 = getGeneric(REQ5);
 ?>
@@ -76,7 +77,43 @@
                 </table>
             </div>
         </li>
-        <li>Requête 3</li>
+        <li>
+            <div class="item-req">
+                <h4>Requete 3</h4>
+                <span>Détails :</span>
+                <span>
+                    Pour cette requête on vous demande d’afficher des informations sur tous les dessins qui ont été évalués et qui sont stockés dans la base. 
+                    <br>
+                    Voici les informations qu’on souhaite voir affichés : le numéro, l’année, la description du concours dans lequel le dessin a été évalué ; 
+                    <br>
+                    le nom du compétiteur ayant proposé le dessin ; le numéro et le commentaire du dessin fait par le compétiteur ; la note et le commentaire de l’évaluation ; le nom de l’évaluateur. 
+                </span>
+                <table id="customers">
+                    <tr>
+                        <th>Numéro compétiteur</th>
+                        <th>Numéro dessin</th>
+                        <th>Note</th>
+                        <th>Date</th>
+                        <th>Commentaire de l'évaluateur</th>
+                        <th>Descriptif concours</th>
+                        <th>Numéro du concours</th>
+                    </tr>
+                    <?php
+                        foreach ($req3 as $key=>$value) {
+                            echo '<tr>
+                            <td>'. $value["numCompetiteur"] .'</td>
+                            <td>'. $value["numDessin"] .'</td>
+                            <td>'. $value["note"] .'</td>
+                            <td>'. $value["dateDebut"] .'</td>
+                            <td>'. $value["commentaire"] .'</td>
+                            <td>'. $value["descriptif"] .'</td>
+                            <td>'. $value["numConcours"] .'</td>
+                            </tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </li>
         <li>
             <div class="item-req">
                 <h4>Requete 4</h4>
