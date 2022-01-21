@@ -17,6 +17,7 @@
         <!-- importer le fichier de style -->
         <link rel="stylesheet" href="./style.css" media="screen" type="text/css" />
         <title>Président</title>
+        <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
     </head>
     <body>
         <div id="container">
