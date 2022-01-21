@@ -44,4 +44,18 @@ INNER JOIN Evalue ON Dessin.numDessin = Evalue.numDessin
 
 WHERE Evalue.note < 10');
 
+define('REQ9', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, AVG(dessin.classement) as avgRanking
+
+FROM utilisateur 
+
+INNER JOIN competiteur ON utilisateur.numUtilisateur = competiteur.numCompetiteur 
+INNER JOIN remis ON competiteur.numCompetiteur = remis.numCompetiteur 
+INNER JOIN dessin ON remis.numDessin = dessin.numDessin
+
+GROUP BY utilisateur.numUtilisateur
+
+ORDER BY AVG(dessin.classement) ASC
+
+LIMIT 1');
+
 ?>
