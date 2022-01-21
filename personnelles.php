@@ -1,9 +1,11 @@
 <?php 
     include_once("./requetes.php");
     include_once("./const.php");
+    $req6 = getGeneric(REQ6);
     $req7 = getGeneric(REQ7);
     $req8 = getGeneric(REQ8);
     $req9 = getGeneric(REQ9);
+    $req10 = getGeneric(REQ10);
 ?>
 
 <html lang="en">
@@ -16,7 +18,27 @@
 </head>
 <body>
     <ol>
-        <li>Requête 6</li>
+        <li>
+            <div class="item-req">
+                <h4>Requete 6</h4>
+                <span>Détails :</span>
+                <span>Afficher pour chaque thème et dans l’ordre croissant le nombre de compétiteur pour les concours où il y a le plus grand nombre de dessins proposés.  </span>
+                <table id="customers">
+                    <tr>
+                        <th>Thème</th>
+                        <th>Nombre Compétiteur</th>
+                    </tr>
+                    <?php
+                        foreach ($req6 as $key=>$value) {
+                            echo '<tr>
+                            <td>'. $value["theme"] .'</td>
+                            <td>'. $value["COUNT(competiteur.numCompetiteur)"] .'</td>
+                            </tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </li>
         <li>
             <div class="item-req">
                 <h4>Requete 7</h4>
@@ -82,7 +104,29 @@
                 </table>
             </div>
         </li>
-        <li>Requête 10</li>
+        <li>
+            <div class="item-req">
+                <h4>Requete 10</h4>
+                <span>Détails :</span>
+                <span>Afficher par ordre décroissant l'identifiant et le prénom des évaluateurs en fonction des notes moyennes qu'ils mettent. </span>
+                <table id="customers">
+                    <tr>
+                        <th>Identifiant</th>
+                        <th>Prénom</th>
+                        <th>Note moyenne</th>
+                    </tr>
+                    <?php
+                        foreach ($req10 as $key=>$value) {
+                            echo '<tr>
+                            <td>'. $value["numUtilisateur"] .'</td>
+                            <td>'. $value["prenom"] .'</td>
+                            <td>'. $value["AVG(evalue.note)"] .'</td>
+                            </tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </li>
     </ol>
 </body>
 </html>

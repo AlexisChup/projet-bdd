@@ -30,6 +30,17 @@ WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-0
 
 ORDER BY Evalue.Note ASC');
 
+define('REQ6', 'SELECT COUNT(competiteur.numCompetiteur), concours.theme
+
+FROM competiteur
+
+INNER JOIN participe ON competiteur.numCompetiteur = participe.numCompetiteur
+INNER JOIN concours ON participe.numConcours = concours.numConcours
+
+GROUP BY concours.theme
+
+ORDER BY COUNT(competiteur.numCompetiteur) ASC');
+
 define('REQ7', 'SELECT Dessin.commentaire, MAX(Evalue.note) as noteMax
 
 FROM Dessin
@@ -57,5 +68,16 @@ GROUP BY utilisateur.numUtilisateur
 ORDER BY AVG(dessin.classement) ASC
 
 LIMIT 1');
+
+define('REQ10', 'SELECT AVG(evalue.note), utilisateur.prenom, utilisateur.numUtilisateur 
+
+FROM utilisateur 
+
+INNER JOIN evaluateur ON utilisateur.numUtilisateur = evaluateur.numEvaluateur 
+INNER JOIN evalue ON evaluateur.numEvaluateur = evalue.numEvaluateur
+
+GROUP BY (utilisateur.numUtilisateur)
+
+ORDER BY AVG(evalue.note) DESC');
 
 ?>
