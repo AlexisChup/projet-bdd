@@ -17,7 +17,7 @@
     <title>Requêtes personnelles</title>
 </head>
 <body>
-    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
+    <input class="button" type="button" value="Retour" onClick="window.location.href='./accueil.php'">
     <ol>
         <li>
             <div class="item-req">

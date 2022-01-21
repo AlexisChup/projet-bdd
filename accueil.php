@@ -16,14 +16,14 @@
 </head>
 <body>
     <header>
-        <input type="button" value="Se déconnecter" onClick="window.location.href='./deconnexion.php?deconnexion=true'">
+        <input class="button" type="button" value="Se déconnecter" onClick="window.location.href='./deconnexion.php?deconnexion=true'">
     </header>
     <div id="accueil">
         <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
         <h3>Role : <?= $role?></h3>
-        <input type="button" value="Ouvrir la page des requêtes imposées" onClick="window.location.href='./imposees.php'">
-        <input type="button" value="Ouvrir la page des requêtes personnelles" onClick="window.location.href='./personnelles.php'">
-        <input type="button" value="Ouvrir la page d'affichage du profil ouvert" onClick="window.location.href='./<?= $role?>.php'">
+        <input class="button" type="button" value="Requêtes imposées" onClick="window.location.href='./imposees.php'">
+        <input class="button" type="button" value="Requêtes personnelles" onClick="window.location.href='./personnelles.php'">
+        <input class="button" type="button" value="Profil" onClick="window.location.href='./<?= $role?>.php'">
         </div>
 </body>
 </html>
