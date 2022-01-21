@@ -17,7 +17,7 @@
     <title>Utilisateur</title>
 </head>
 <body>
-    <input type="button" value="Retour" onClick="window.location.href='./accueil.php'">
+    <input class="button" type="button" value="Retour" onClick="window.location.href='./accueil.php'">
     <div id="accueil">
     <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
     <h3>Role : <?= $role?></h3> 
