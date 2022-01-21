@@ -649,28 +649,28 @@ INSERT INTO Concours (`theme`, `etat`, `descriptif`, `dateDebut`, `dateFin`) VAL
     "2021-04-07"
 ),
 (
-    "Art abstrait",
+    "Art comtemporain",
     "Evalue",
     "L'art abstrait des annees 1940",
     "2021-05-08",
     "2021-05-15"
 ),
 (
-    "Art abstrait",
+    "Art nul",
     "En attente des resultats",
     "L'art abstrait des annees 1940",
     "2021-12-25",
     "2021-12-31"
 ),
 (
-    "Art abstrait",
+    "Art eklfjioezfjjeZI",
     "En cours",
     "L'art abstrait des annees 1940",
     "2022-01-01",
     "2021-03-01"
 ),
 (
-    "Art abstrait",
+    "Art OULA",
     "Non commence",
     "L'art abstrait des annees 1940",
     "2022-09-15",
