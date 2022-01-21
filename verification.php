@@ -27,9 +27,9 @@ if(isset($_POST['identifiant']) && isset($_POST['motDePasse']))
          //  var_dump($_SESSION);
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
-           //$_SESSION['identifiant'] = $username;
+           $_SESSION['identifiant'] = $username;
          
-            header("Location: ".$role.".php");
+            header("Location: accueil.php");
         }
         else
         {
