@@ -7,8 +7,6 @@
     <body style='background:#fff;'>
         <div id="content">
             
-            <a href='deconnexion.php?deconnexion=true'><span>Déconnexion</span></a>
-            
             <!-- tester si l'utilisateur est connecté -->
             <?php
                 session_start();
@@ -20,11 +18,11 @@
                       header("Location: index.php");
                    }
                 }
-                else if($_SESSION['identifiant'] !== ""){
-                    $user = $_SESSION['identifiant'];
-                    // afficher un message
-                    echo "<br>Bonjour $user, vous êtes connectés";
-                }
+                // else if($_SESSION['identifiant'] !== ""){
+                //     $user = $_SESSION['identifiant'];
+                //     // afficher un message
+                //     echo "<br>Bonjour $user, vous êtes connectés";
+                // }
             ?>
             
         </div>

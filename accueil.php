@@ -12,7 +12,7 @@
      
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <input type="button" value="Se déconnecter" onClick="window.location.href='./deconnexion.php'">
+    <input type="button" value="Se déconnecter" onClick="window.location.href='./deconnexion.php?deconnexion=true'">
 </head>
 <body>
     <h2>Bonjour <?= $nom?> <?= $prenom?></h2>
