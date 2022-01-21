@@ -30,6 +30,22 @@ WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-0
 
 ORDER BY Evalue.Note ASC');
 
+define('REQ4', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
+FROM utilisateur
+INNER JOIN competiteur K on utilisateur.numUtilisateur = K.numCompetiteur
+WHERE NOT EXISTS
+(
+	SELECT *
+    FROM concours C
+    WHERE NOT EXISTS
+    (
+    	SELECT * 
+        FROM participe P
+        WHERE P.numConcours = C.numConcours
+        AND P.numCompetiteur = K.numCompetiteur
+    )
+)');
+
 define('REQ5', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, COUNT(utilisateur.numUtilisateur) as nbDessinEvalue
 
 FROM utilisateur 

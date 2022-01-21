@@ -1,4 +1,4 @@
-SELECT utilisateur.prenom
+SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
 FROM utilisateur
 INNER JOIN competiteur K on utilisateur.numUtilisateur = K.numCompetiteur
 WHERE NOT EXISTS

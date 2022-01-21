@@ -3,6 +3,7 @@
     include_once("./const.php");
     $req1 = getGeneric(REQ1);
     $req2 = getGeneric(REQ2);
+    $req4 = getGeneric(REQ4);
     $req5 = getGeneric(REQ5);
 ?>
 
@@ -76,7 +77,29 @@
             </div>
         </li>
         <li>Requête 3</li>
-        <li>Requête 4</li>
+        <li>
+            <div class="item-req">
+                <h4>Requete 4</h4>
+                <span>Détails :</span>
+                <span>Nom, prénom et âge des compétiteurs qui ont participé à tous les concours qui ont été organisés. </span>
+                <table id="customers">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Âge</th>
+                    </tr>
+                    <?php
+                        foreach ($req4 as $key=>$value) {
+                            echo '<tr>
+                            <td>'. $value["nom"] .'</td>
+                            <td>'. $value["prenom"] .'</td>
+                            <td>'. $value["age"] .'</td>
+                            </tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </li>
         <li>
             <div class="item-req">
                 <h4>Requete 5</h4>
