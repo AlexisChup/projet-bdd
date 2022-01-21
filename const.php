@@ -26,9 +26,37 @@ INNER JOIN Remis ON Dessin.numDessin = Remis.numDessin
 INNER JOIN Competiteur ON Remis.numCompetiteur = Competiteur.numCompetiteur
 INNER JOIN Utilisateur ON Competiteur.numCompetiteur = Utilisateur.numUtilisateur
 
-WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-01"
+WHERE Evalue.dateEvaluatin >= "2021-01-01" AND Evalue.dateEvaluatin < "2022-01-01"
 
 ORDER BY Evalue.Note ASC');
+
+define('REQ3', 'SELECT concours.numConcours, concours.dateDebut, concours.descriptif, competiteur.numCompetiteur, dessin.numDessin, evalue.commentaire, evalue.note
+
+FROM concours, competiteur, evalue, dessin, propose, remis
+
+WHERE 
+(dessin.numDessin = propose.numDessin) AND 
+(propose.numConcours = concours.numConcours) AND 
+(dessin.numDessin = remis.numDessin) AND 
+(remis.numCompetiteur = competiteur.numCompetiteur)
+
+GROUP BY dessin.numDessin');
+
+define('REQ4', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
+FROM utilisateur
+INNER JOIN competiteur K on utilisateur.numUtilisateur = K.numCompetiteur
+WHERE NOT EXISTS
+(
+	SELECT *
+    FROM concours C
+    WHERE NOT EXISTS
+    (
+    	SELECT * 
+        FROM participe P
+        WHERE P.numConcours = C.numConcours
+        AND P.numCompetiteur = K.numCompetiteur
+    )
+)');
 
 define('REQ5', 'SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, COUNT(utilisateur.numUtilisateur) as nbDessinEvalue
 

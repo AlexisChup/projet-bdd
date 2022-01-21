@@ -704,6 +704,10 @@ INSERT INTO Propose (`numDessin`, `numConcours`, `datePropose`) VALUES
  
 INSERT INTO Participe (`numCompetiteur`, `numConcours`, `dateParticipation`) VALUES
 (21, 1, "2021-04-02"),
+(21, 2, "2021-05-09"),
+(21, 3, "2021-12-29"),
+(21, 4, "2022-01-02"),
+(21, 5, "2022-09-16"),
 (22, 1, "2021-04-02"),
 (23, 1, "2021-04-02"),
 (24, 1, "2021-04-02"),

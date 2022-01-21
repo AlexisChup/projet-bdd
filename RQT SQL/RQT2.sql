@@ -9,6 +9,6 @@ INNER JOIN Remis ON Dessin.numDessin = Remis.numDessin
 INNER JOIN Competiteur ON Remis.numCompetiteur = Competiteur.numCompetiteur
 INNER JOIN Utilisateur ON Competiteur.numCompetiteur = Utilisateur.numUtilisateur
 
-WHERE Evalue.dateEvaluatin >= "2019-01-01" AND Evalue.dateEvaluatin < "2020-01-01"
+WHERE Evalue.dateEvaluatin >= "2021-01-01" AND Evalue.dateEvaluatin < "2022-01-01"
 
 ORDER BY Evalue.Note ASC

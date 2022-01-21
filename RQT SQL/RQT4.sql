@@ -1,7 +1,15 @@
 SELECT utilisateur.nom, utilisateur.prenom, utilisateur.age
 FROM utilisateur
-INNER JOIN competiteur ON utilisateur.numUtilisateur = competiteur.numCompetiteur
-WHERE NOT EXISTS 
-(SELECT * 
-FROM Participe P, Competiteur C, Concours K
-WHERE C.numCompetiteur = P.numCompetiteur AND P.numConcours = K.numConcours)
+INNER JOIN competiteur K on utilisateur.numUtilisateur = K.numCompetiteur
+WHERE NOT EXISTS
+(
+	SELECT *
+    FROM concours C
+    WHERE NOT EXISTS
+    (
+    	SELECT * 
+        FROM participe P
+        WHERE P.numConcours = C.numConcours
+        AND P.numCompetiteur = K.numCompetiteur
+    )
+)
