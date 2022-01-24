@@ -251,8 +251,8 @@ INSERT INTO Utilisateur (`nom`, `prenom`, `adresse`, `role`, `identifiant`, `mot
     "talus",
     "avenue de la terre",
     "president",
-    "ttbzefzb12a3456",
-    "azertyuiop",
+    "d",
+    "d",
     58
 ),
 (
@@ -287,8 +287,8 @@ INSERT INTO Utilisateur (`nom`, `prenom`, `adresse`, `role`, `identifiant`, `mot
     "tastaze",
     "avenue cosovard",
     "administrateur",
-    "ttbb123a456",
-    "azertyuiop",
+    "b",
+    "b",
     70
 ),
 (
@@ -296,8 +296,8 @@ INSERT INTO Utilisateur (`nom`, `prenom`, `adresse`, `role`, `identifiant`, `mot
     "grosurlapatate",
     "place du potager",
     "competiteur",
-    "ttbb123r456",
-    "azertyuiop",
+    "c",
+    "c",
     46
 ),
 (

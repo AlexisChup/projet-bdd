@@ -190,7 +190,7 @@ function updateNote($info){
                 $link = new PDO($h, DB_USER, DB_PASS);
                 $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-                $sql = "UPDATE `evalue` SET `note` = ".$info[0].", `commentaire` = '".$info[1]."' WHERE `evalue`.`numDessin` = ".$info[2]." AND `evalue`.`numEvaluateur` = ".$_SESSION["id_utilisateur"]."";
+                $sql = "";
                 $sth = $link->prepare($sql);
         
                 $sth->execute();
