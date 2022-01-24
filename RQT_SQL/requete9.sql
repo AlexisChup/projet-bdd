@@ -1,4 +1,4 @@
-SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, AVG(dessin.classement)
+SELECT utilisateur.nom, utilisateur.prenom, utilisateur.adresse, AVG(dessin.classement) as avgRanking
 
 FROM utilisateur 
 

@@ -1,4 +1,4 @@
-SELECT Dessin.commentaire, MAX(Evalue.note)
+SELECT Dessin.commentaire, MAX(Evalue.note) as noteMax
 
 FROM Dessin
 

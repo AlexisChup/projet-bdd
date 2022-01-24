@@ -1,4 +1,4 @@
-SELECT COUNT(Evalue.note)
+SELECT COUNT(Evalue.note) as nbrNote
 
 FROM Dessin
 

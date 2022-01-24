@@ -1,4 +1,4 @@
-SELECT COUNT(competiteur.numCompetiteur) as nbCompetiteurs, concours.theme
+SELECT COUNT(competiteur.numCompetiteur), concours.theme
 
 FROM competiteur
 
